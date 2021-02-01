@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}追加｜Shopping List{% endblock %}
+
+{% block active_list_display %}active{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="table">
+                    {{ form.as_table }}
+                </table>
+                <button class="btn btn-primary" type="submit">追加</button>
+                <a class="btn btn-secondary" href="{% url 'listapp:list_display' %}">戻る</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

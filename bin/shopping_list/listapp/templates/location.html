@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}位置取得｜Shopping List{% endblock %}
+
+{% block active_list_display %}active{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block contents %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="mt-5 display-4">今の位置情報を取得する</p>
+        <button onclick="result()">こちらをクリック</button>
+        <p id="getlat6"></p>
+        <p id="getlng6"></p>
+        <p id="lat6lng6"></p>
+      </div>
+    </div>
+  </div>
+
+<script src="{% static 'vendor/bootstrap/js/get_geolocation.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/read_csv.js' %}"></script>
+
+<script>
+
+</script>
+{% endblock %}

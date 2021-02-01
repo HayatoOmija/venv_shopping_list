@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}ホーム｜Shopping List{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block contents %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5 display-4">My List</h1>
+        <p class="lead">シンプルな買い物リスト</p>
+        <a href="{% url 'account_login' %}" class="btn btn-primary btn-default">ログイン</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-success btn-default">サインアップ</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
